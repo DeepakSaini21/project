@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<title>unifdef - selectively remove C preprocessor conditionals</title>
+</head>
+<body>
+<h1><a href="http://dotat.at/">
+    <img src="http://dotat.at/graphics/dotat.png"
+	 alt=".@" width="48" height="40"
+	 style="vertical-align: middle; border-width: 0"></a>
+  <span style="vertical-align: middle">
+    unifdef - selectively remove C preprocessor conditionals
+  </span>
+</h1>
+
+<hr>
+
+<p>The <tt>unifdef</tt> utility selectively processes conditional C
+ preprocessor <tt>#if</tt> and <tt>#ifdef</tt> directives. It removes
+ from a file both the directives and the additional text that they
+ delimit, while otherwise leaving the file alone.</p>
+
+<p>It is useful for avoiding distractions when studying code that uses
+ <tt>#ifdef</tt> heavily for portability: my original motivation
+ was to understand <tt>xterm</tt>'s <tt>pty</tt> handling code.
+ It can be used as a lightweight preprocessor; for example
+ <a href="http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/scripts/headers_install.sh">the
+ Linux kernel uses <tt>unifdef</tt></a> to strip out
+ <tt>#ifdef __KERNEL__</tt> sections from the headers it exports to userland.
+ You can use <tt>unifdef</tt> with languages other than C;
+ for example <a href="http://www.uit.co.uk/">UIT</a>,
+ a publisher in Cambridge where I live, uses
+ <a href="http://www.uit.co.uk/ForAuth/LatexConditionals">unifdef with LaTeX</a>.</p>
+
+<ul>
+ <li>Download:
+  <br><tt><a href="unifdef-2.11.tar.xz"> unifdef-2.11.tar.xz </a></tt>
+  <br><tt><a href="unifdef-2.11.tar.gz"> unifdef-2.11.tar.gz </a></tt>
+  <br><tt><a href="unifdef-2.11.zip">    unifdef-2.11.zip    </a></tt>
+ </li>
+ <li><a href="unifdef.txt">Read the manual</a></li>
+ <li><a href="http://dotat.at/cgi/git/unifdef.git">Browse the source</a></li>
+ <li>Clone my repository using
+     <br><tt>git clone git://dotat.at/unifdef.git</tt></li>
+ <li>Collaborate using
+     <a href="http://github.com/fanf2/unifdef">github</a></li>
+ <li><a href="COPYING">Copyright licence: BSD</a></li>
+ <li><a href="INSTALL">Build instructions for Unix and Windows</a></li>
+</ul>
+
+<p>Please send bug reports and patches <a href="mailto:dot@dotat.at">to me</a>.
+Unless you state otherwise, I will assume that any contributions
+are under the two-clause BSD licence.</p>
+
+<hr>
+
+<address>
+ <tt>unifdef</tt> was written by <a href="http://dotat.at/">Tony Finch</a>
+ &lt;<a href="mailto:dot@dotat.at">dot@dotat.at</a>&gt;
+</address>
+
+<hr>
+
+</body>
+</html>
